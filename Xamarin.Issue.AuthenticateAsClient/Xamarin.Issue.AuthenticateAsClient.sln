@@ -1,0 +1,41 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.3.32804.467
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Net6Android", "Net6Android\Net6Android.csproj", "{56481528-B45D-4647-90BE-62F906C2430A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "XamarinAndroid", "XamarinAndroid\XamarinAndroid.csproj", "{336F69B0-A1E5-42F7-9771-23B6D75337E2}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SharedLib", "SharedLib\SharedLib.csproj", "{CCD52980-E4C3-4572-814C-1CCAC8FF2F99}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{56481528-B45D-4647-90BE-62F906C2430A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{56481528-B45D-4647-90BE-62F906C2430A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{56481528-B45D-4647-90BE-62F906C2430A}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{56481528-B45D-4647-90BE-62F906C2430A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{56481528-B45D-4647-90BE-62F906C2430A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{56481528-B45D-4647-90BE-62F906C2430A}.Release|Any CPU.Deploy.0 = Release|Any CPU
+		{336F69B0-A1E5-42F7-9771-23B6D75337E2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{336F69B0-A1E5-42F7-9771-23B6D75337E2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{336F69B0-A1E5-42F7-9771-23B6D75337E2}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{336F69B0-A1E5-42F7-9771-23B6D75337E2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{336F69B0-A1E5-42F7-9771-23B6D75337E2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{336F69B0-A1E5-42F7-9771-23B6D75337E2}.Release|Any CPU.Deploy.0 = Release|Any CPU
+		{CCD52980-E4C3-4572-814C-1CCAC8FF2F99}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CCD52980-E4C3-4572-814C-1CCAC8FF2F99}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CCD52980-E4C3-4572-814C-1CCAC8FF2F99}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CCD52980-E4C3-4572-814C-1CCAC8FF2F99}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {09092699-AE9A-477D-BE96-E75714351E89}
+	EndGlobalSection
+EndGlobal
