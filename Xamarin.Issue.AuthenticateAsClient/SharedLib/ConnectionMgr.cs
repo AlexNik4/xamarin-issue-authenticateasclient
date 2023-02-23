@@ -7,8 +7,16 @@ namespace SharedLib
 {
 	public class ConnectionMgr
 	{
-		private const string Hostname = "192.168.0.5";
+		private readonly string Hostname = "192.168.0.5";
 		private const int Port = 5544;
+
+		public ConnectionMgr(string ip = null)
+		{
+			if (!String.IsNullOrEmpty(ip))
+			{
+				Hostname = ip;
+			}
+		}
 
 		public void TestConnect()
 		{
@@ -35,6 +43,7 @@ namespace SharedLib
 
 		private bool ValidateServerCertificate(object sender, X509Certificate certificate, X509Chain chain, SslPolicyErrors sslPolicyErrors)
 		{
+			Console.WriteLine("Policy Errors: " + sslPolicyErrors.ToString());
 			// Don't care about actually validating server cert
 			return true;
 		}
