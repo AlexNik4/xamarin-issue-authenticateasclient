@@ -4,11 +4,13 @@ using System.Net.Sockets;
 using System.Security.Authentication;
 using System.Security.Cryptography.X509Certificates;
 
-await ServerMgr.StartServerAsync();
+Console.WriteLine("Enter Root CA Name");
+string? certName = Console.ReadLine();
+await ServerMgr.StartServerAsync(certName);
 
 public class ServerMgr
 {
-	public static async Task StartServerAsync()
+	public static async Task StartServerAsync(string certFriendlyName = "")
 	{
 		TcpListener listener = new TcpListener(IPAddress.Any, 5544);
 		listener.Start();
@@ -17,11 +19,11 @@ public class ServerMgr
 		{
 			Console.WriteLine("Waiting connect");
 			TcpClient client = await listener.AcceptTcpClientAsync();
-			await ProcessClientAsync(client);
+			await ProcessClientAsync(client, certFriendlyName);
 		}
 	}
 
-	public static async Task ProcessClientAsync(TcpClient client)
+	public static async Task ProcessClientAsync(TcpClient client, string certFriendlyName = "")
 	{
 		try
 		{
@@ -31,7 +33,7 @@ public class ServerMgr
 			// Authenticate the client connection using the server certificate
 			X509Store store = new X509Store(StoreName.Root, StoreLocation.LocalMachine);
 			store.Open(OpenFlags.ReadOnly);
-			X509Certificate2Collection certs = store.Certificates.Find(X509FindType.FindBySubjectName, "Philips Healthcare Local Root CA (IntelliVue Patient Information Center iX)", true);
+			X509Certificate2Collection certs = store.Certificates.Find(X509FindType.FindBySubjectName, certFriendlyName, true);
 
 			X509Certificate2 certificate = certs[0];
 			// Use the certificate to authenticate the client connection
